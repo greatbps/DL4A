@@ -15,7 +15,7 @@ seed = 0
 numpy.random.seed(seed)
 tf.random.set_seed(3)
 
-df = pd.read_csv('../../dataset/sonar.csv', header=None)
+df = pd.read_csv('D:\90.GreatBPS\91.GitHub\DL4A\dataset\sonar.csv', header=None)
 
 '''
 print(df.info())
@@ -23,9 +23,8 @@ print(df.head())
 '''
 
 dataset = df.values
-X = dataset[:,0:60]
+X = dataset[:,0:60].astype(float)
 Y_obj = dataset[:,60]
-
 e = LabelEncoder()
 e.fit(Y_obj)
 Y = e.transform(Y_obj)

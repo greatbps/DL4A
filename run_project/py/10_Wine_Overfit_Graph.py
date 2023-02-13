@@ -15,7 +15,7 @@ import tensorflow as tf
 numpy.random.seed(3)
 tf.random.set_seed(3)
 
-df_pre = pd.read_csv('../../dataset/wine.csv', header=None)
+df_pre = pd.read_csv('D:\90.GreatBPS\91.GitHub\DL4A\dataset/wine.csv', header=None)
 df = df_pre.sample(frac=0.15)
 
 dataset = df.values
